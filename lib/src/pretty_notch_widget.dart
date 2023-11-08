@@ -26,7 +26,11 @@ class PrettyNotch extends StatefulWidget {
 
 class _PrettyNotchState extends State<PrettyNotch> {
   late final Future<IosNotchType> notch;
-  final bodyKey = UniqueKey();
+
+  /// Используется чтобы сохранять контекст всей иерархии и не вызывать лишние
+  /// ребилды если виджет будет интерактивный
+  final bodyKey = GlobalKey();
+
   @override
   void initState() {
     notch = NotchUtil.notchType;

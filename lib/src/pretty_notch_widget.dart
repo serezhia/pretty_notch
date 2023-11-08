@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pretty_notch/src/notch_calculator.dart';
+import 'package:pretty_notch/src/notch_util.dart';
 
 import 'notch_type.dart';
 
@@ -29,7 +29,7 @@ class _PrettyNotchState extends State<PrettyNotch> {
   final bodyKey = UniqueKey();
   @override
   void initState() {
-    notch = getNotchType();
+    notch = NotchUtil.notchType;
     super.initState();
   }
 
@@ -94,7 +94,7 @@ class _PrettyNotchState extends State<PrettyNotch> {
                           ],
                         ),
                       ),
-                    IosNotchType.littleNotch => Positioned(
+                    IosNotchType.shortNotch => Positioned(
                         top: 5,
                         left: 0,
                         right: 0,

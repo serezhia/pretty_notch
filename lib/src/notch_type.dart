@@ -1,6 +1,6 @@
 enum IosNotchType {
   /// Iphone 13, 14, 14 Plus
-  littleNotch,
+  shortNotch,
 
   /// Iphone XR,10,11,12
   longNotch,
